@@ -5,7 +5,7 @@ public class aula_03 {
         System.out.println(p1);
         System.out.println(p2);
 
-        p1 = "TEXTO";
+        // p1 = "TEXTO";
         System.out.println(p1);
     }
 }
