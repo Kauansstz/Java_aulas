@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class exerc_calc_1 {
 
     public static void main(String[] args) {
-       Scanner entrada = new Scanner(System.in);
+       try(Scanner entrada = new Scanner(System.in)){
 
        System.out.println("Informe o primeiro salário: ");
        String valor1 = entrada.next().replace(",", ".");
@@ -22,5 +22,5 @@ public class exerc_calc_1 {
 
        entrada.close();
     }
-    
+}
 }
