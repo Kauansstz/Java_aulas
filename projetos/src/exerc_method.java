@@ -3,47 +3,46 @@ import java.util.Scanner;
 
 public class exerc_method {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in, "UTF-8");
-
-        System.out.println("Digite o Seu nome: ");
-        String nome = entrada.next();
-
-        System.out.println("Digite a sua idade: ");
-        int idade = entrada.nextInt();
-
-        System.out.println("Agora digite o peso atual: ");
-        String pesoStr = entrada.next().replace(",",".");
-        double peso = Double.parseDouble(pesoStr);
-        
-        Pessoa p = new Pessoa(nome, idade, peso);
-       
-        
-        System.out.println();
-        System.out.println("Está sentindo fome?");
-        String fome = entrada.next();
-        
-
-        if (fome.equalsIgnoreCase("sim") ){
-            System.out.println("Digite qual a refeição: ");
-            String tipo = entrada.next();
-            entrada.nextLine();
-            System.out.println("Digite a comida da refeição: ");
-            String comida = entrada.nextLine();
+        try (Scanner entrada = new Scanner(System.in, "UTF-8")) {
+            System.out.println("Digite o Seu nome: ");
+            String nome = entrada.next();
             
-            System.out.println("Digite o peso da refeição (g): ");
-            String pesoStr2 = entrada.next();
-            double pesoDouble = Double.parseDouble(pesoStr2);
-
-            System.out.println("Digite as calorias da refeição: ");
-            String kclStr = entrada.next();
-            double kclDouble = Double.parseDouble(kclStr);
-
-            Refeicao r = new Refeicao(tipo, comida, pesoDouble, kclDouble);
-            r.exibirDados();
-            CalcularPeso c = new CalcularPeso(p, r);
-            p.exibirDados(c);
-        } else {System.out.println("Encerrando o sistema...");}
-        entrada.close();
+            System.out.println("Digite a sua idade: ");
+            int idade = entrada.nextInt();
+            
+            System.out.println("Agora digite o peso atual: ");
+            String pesoStr = entrada.next().replace(",",".");
+            double peso = Double.parseDouble(pesoStr);
+            
+            Pessoa p = new Pessoa(nome, idade, peso);
+            
+            
+            System.out.println();
+            System.out.println("Está sentindo fome?");
+            String fome = entrada.next();
+            
+            
+            if (fome.equalsIgnoreCase("sim") ){
+                System.out.println("Digite qual a refeição: ");
+                String tipo = entrada.next();
+                entrada.nextLine();
+                System.out.println("Digite a comida da refeição: ");
+                String comida = entrada.nextLine();
+                
+                System.out.println("Digite o peso da refeição (g): ");
+                String pesoStr2 = entrada.next();
+                double pesoDouble = Double.parseDouble(pesoStr2);
+                
+                System.out.println("Digite as calorias da refeição: ");
+                String kclStr = entrada.next();
+                double kclDouble = Double.parseDouble(kclStr);
+                
+                Refeicao r = new Refeicao(tipo, comida, pesoDouble, kclDouble);
+                r.exibirDados();
+                CalcularPeso c = new CalcularPeso(p, r);
+                p.exibirDados(c);
+            } else {System.out.println("Encerrando o sistema...");}
+        }
     }
 }
 
