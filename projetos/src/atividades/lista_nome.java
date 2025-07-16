@@ -1,6 +1,7 @@
-package att_votos;
+package atividades;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,8 +25,11 @@ public class lista_nome {
     }
 
     public void ListaComIndice() {
-        for (int i = 0; i < nomes.size(); i++) {
-            System.out.println((i + 1) + " - " + nomes.get(i));
+        HashSet<String> nomesUnicos = new HashSet<>(nomes);
+        if (nomesUnicos.size() < nomes.size()) {
+            for (int i = 0; i < nomesUnicos.size(); i++) {
+                System.out.println((i + 1) + " - " + nomes.get(i));
+        } 
         }
     }
 
