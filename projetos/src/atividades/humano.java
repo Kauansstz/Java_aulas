@@ -4,13 +4,13 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Humano {
+public class humano {
     String nome;
     int idade;
     String sexo;
-    public static HashSet<Humano> nomeUnico = new HashSet<>();
+    public static HashSet<humano> nomeUnico = new HashSet<>();
 
-    public Humano(String nome, int idade, String sexo){
+    public humano(String nome, int idade, String sexo){
         this.nome = nome;
         this.idade= idade;
         this.sexo = sexo;
@@ -49,7 +49,7 @@ public class Humano {
 
     
     public static void Addinfo(String nome, int idade, String sexo){
-        Humano pessoa = new Humano(nome, idade, sexo);  
+        humano pessoa = new humano(nome, idade, sexo);  
         if (pessoa.validarNomeUnico() && pessoa.validarIdade(idade)){
             System.out.println("Nome: " + pessoa.getNome());
             System.out.println("Idade: " + pessoa.getIdade());
@@ -61,8 +61,8 @@ public class Humano {
     @Override
     public boolean  equals(Object obj){
         if (this == obj) return true;
-        if(!(obj instanceof Humano)) return false;
-        Humano outro = (Humano) obj;
+        if(!(obj instanceof humano)) return false;
+        humano outro = (humano) obj;
         return Objects.equals(this.nome, outro.nome) && this.idade == outro.idade && Objects.equals(this.sexo, outro.sexo);
     }
 
