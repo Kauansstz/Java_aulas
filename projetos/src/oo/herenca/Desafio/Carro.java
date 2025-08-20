@@ -1,6 +1,6 @@
 package oo.herenca.Desafio;
 
-public class Carro {
+public class Carro implements aula_24_inter {
     final oo.herenca.Desafio.Motor motor;
     String marca;
     String modelo;
@@ -38,5 +38,13 @@ public class Carro {
     }
     boolean EstaLigado(){
         return motor.ligado;
+    }
+    @Override
+    public void ligarTurbo(){
+        int delta = 15;
+    }
+    @Override
+    public void desligarTurbo(){
+        int delta = 0;
     }
 }
