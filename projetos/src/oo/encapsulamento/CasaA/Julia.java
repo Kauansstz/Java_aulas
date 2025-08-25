@@ -7,9 +7,9 @@ public class Julia {
 
     void testeAcesso(){
 
-        System.out.println(esposa.FacoDentroDeCasa);
-        System.out.println(esposa.formaDeFalar);
-        System.out.println(esposa.a);
+        // System.out.println(esposa.FacoDentroDeCasa);
+        // System.out.println(esposa.formaDeFalar);
+        // System.out.println(esposa.a);
        
     }
 }
