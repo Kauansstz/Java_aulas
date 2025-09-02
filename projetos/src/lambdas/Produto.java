@@ -14,4 +14,8 @@ public class Produto extends Object{
         double precoFinal = preco * (1-desconto);
         return  nome + " tem preço de R$ "+ precoFinal;
     }
+    public Double getPreco(){
+        double precoFinal2 = preco * (1-desconto);
+        return precoFinal2;
+    }
 }
